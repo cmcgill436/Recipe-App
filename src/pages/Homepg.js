@@ -1,4 +1,4 @@
-import "../Homepg.css";
+import "../Homep    g.css";
 import "animate.css";
 import Nav from "../components/Nav";
 
