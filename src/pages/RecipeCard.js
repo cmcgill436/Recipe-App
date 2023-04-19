@@ -1,3 +1,7 @@
 export default function RecipeCard(props) {
-  return <h1>This is the Card Component</h1>;
+  return (
+    <div className="card">
+      <p>{props.name}</p>
+    </div>
+  );
 }
