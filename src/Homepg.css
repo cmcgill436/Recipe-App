@@ -6,5 +6,7 @@
 }
 
 .home-body {
-  text-align: right;
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px;
 }
