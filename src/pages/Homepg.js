@@ -4,13 +4,14 @@ import { useState, useEffect } from "react";
 import RecipeCard from "./RecipeCard";
 import { Link } from "react-router-dom";
 
-export default function Home() {
-  const [recipe, setRecipe] = useState(null);
+export default function Home({ setData }) {
+  const [recipe, setRecipe] = useState(undefined);
+  const [recipeCard, setrecipeCard] = useState(undefined);
 
   const getRecipe = async (searchTerm) => {
     try {
       if (!searchTerm) {
-        setRecipe(null);
+        setRecipe("");
         return;
       }
       const response = await fetch(
@@ -18,30 +19,42 @@ export default function Home() {
       );
       const data = await response.json();
       setRecipe(data);
+      setData(data);
     } catch (error) {
       console.error(error);
     }
   };
 
   useEffect(() => {
-    getRecipe();
-  }, []);
+    setrecipeCard(
+      recipe?.meals.map((recipe, i) => {
+        return <RecipeCard key={i} recipe={recipe} id={i} />;
+      })
+    );
+  }, [recipe]);
+  console.log(recipe, "i am here");
+  console.log(recipeCard, "I am there");
+  // let recipes = undefined;
+  // if (recipe?.length > 0) {
+  //   recipes = recipe.meals.map((recipe, i) => {
+  //     return <RecipeCard key={i} recipe={recipe} />;
+  //   });
 
   return (
-    <div>
+    <div className="homepage">
       <div className="header">
         <div className="title">
-          <header className="animate__animated animate__bounceInDown">
+          <header className="animate__animated animate__flip">
             <Link to="/" className="navLink">
-              <div>Recipe App</div>
+              <div className="animate__animated  animate__bounceInDown">
+                Recipe App
+              </div>
             </Link>
           </header>
         </div>
-        <Nav recipesearch={getRecipe} />
+        <Nav getRecipe={getRecipe} />
       </div>
-      <div>
-        <RecipeCard recipe={recipe} />
-      </div>
+      <div className="maincontent">{recipeCard}</div>
     </div>
   );
 }

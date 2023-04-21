@@ -1,12 +1,17 @@
-export default function RecipeCard({ recipe }) {
+import { Link } from "react-router-dom";
+
+export default function RecipeCard({ recipe, id }) {
   const loaded = () => {
     return (
-      <>
-        <img src={recipe.strMealThumb} alt={recipe.strMeal} />
-        <h1>{recipe.strMeal}</h1>
-        <h2>{recipe.strArea}</h2>
-        <h2>{recipe.strCategory}</h2>
-      </>
+      <Link className="card" to={`/recipes/${id}`}>
+        <div>
+          <img src={recipe.strMealThumb} alt={recipe.strMeal} className="img" />
+          <br />
+          <button>{recipe.strMeal}</button>
+          <button>{recipe.strArea}</button>
+          <button>{recipe.strCategory}</button>
+        </div>
+      </Link>
     );
   };
 

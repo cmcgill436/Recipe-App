@@ -10,15 +10,13 @@ export default function Nav(props) {
         <Link to="/" className="navLink">
           <div>Home</div>
         </Link>
-        <Link to="/recipes" className="navLink">
+        <Link to="/recipes/" className="navLink">
           <div>Recipes</div>
         </Link>
         <Link to="/about" className="navLink">
           <div>About</div>
         </Link>
-      </div>
-      <div>
-        <Searchbar recipesearch={props.getRecipe} />
+        <Searchbar getRecipe={props.getRecipe} />
       </div>
     </div>
   );

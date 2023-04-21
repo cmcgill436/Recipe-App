@@ -13,7 +13,7 @@ export default function Form(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    props.recipesearch(inputData.searchTerm);
+    props.getRecipe(inputData.searchTerm);
   };
 
   return (

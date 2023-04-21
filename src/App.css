@@ -1,16 +1,23 @@
-.header {
+.header,
+.recipes {
   background-image: url("../public/nutrition_header.jpg");
   text-align: center;
   font-weight: bold;
-  font-size: 35px;
   color: white;
-  text-shadow: -1px -1px 0 #820d5c, 1px -1px 0 #820d5c, -1px 1px 0 #820d5c,
+  text-shadow: -2px -2px 0 #820d5c, 1px -1px 0 #820d5c, -1px 1px 0 #820d5c,
     1px 1px 0 #820d5c;
+  padding: 25px 5px;
+}
+
+.title {
+  font-size: 75px;
 }
 
 .nav {
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
+  font-size: 30px;
 }
 
 .navLink {
@@ -20,11 +27,11 @@
 }
 
 .searchbar {
-  padding-bottom: 20px;
+  width: 600px;
 }
 
 input {
-  width: 30%;
+  width: 50%;
   border: 2px solid #820d5c;
 }
 
@@ -34,4 +41,32 @@ input {
   color: white;
   text-shadow: -1px -1px 0 #820d5c, 1px -1px 0 #820d5c, -1px 1px 0 #820d5c,
     1px 1px 0 #820d5c;
+}
+
+.img {
+  width: 200px;
+  height: 200px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #820d5c;
+  width: 260px;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 30px;
+  padding: 30px 5px;
+}
+
+.maincontent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
 }
