@@ -1,6 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function Form(props) {
+  console.log(props);
   const [inputData, setInputData] = useState({
     searchTerm: "",
   });
@@ -22,7 +23,7 @@ export default function Form(props) {
           type="text"
           onChange={handleChange}
           placeholder="let's get cookin"
-          defaultvalue={inputData.searchTerm}
+          value={inputData.searchTerm}
           name="searchTerm"
         />
         <button type="submit" value="Submit Recipe" className="searchbtn">

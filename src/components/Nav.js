@@ -3,6 +3,7 @@ import Searchbar from "../components/Searchbar";
 import { Link } from "react-router-dom";
 
 export default function Nav(props) {
+  console.log("this is nav props", props);
   return (
     <div>
       <div className="nav">
@@ -17,7 +18,7 @@ export default function Nav(props) {
         </Link>
       </div>
       <div>
-        <Searchbar />
+        <Searchbar recipesearch={props.getRecipe} />
       </div>
     </div>
   );
