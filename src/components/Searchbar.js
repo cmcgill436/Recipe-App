@@ -17,7 +17,7 @@ export default function Form(props) {
   };
 
   return (
-    <div>
+    <div className="searchDiv">
       <form onSubmit={handleSubmit} className="searchbar">
         <input
           type="text"

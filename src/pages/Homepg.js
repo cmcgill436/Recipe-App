@@ -47,7 +47,7 @@ export default function Home({ setData }) {
           <header className="animate__animated animate__flip">
             <Link to="/" className="navLink">
               <div className="animate__animated  animate__bounceInDown">
-                Recipe App
+                RecipeApp
               </div>
             </Link>
           </header>
