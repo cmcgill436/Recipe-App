@@ -10,6 +10,8 @@ React.js
 
 ## Usage
 
+git
+
 ````md
 ![alt text](assets/images/RecipeApp screenshot.png)
 
