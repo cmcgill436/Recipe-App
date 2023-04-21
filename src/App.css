@@ -1,0 +1,37 @@
+.header {
+  background-image: url("../public/nutrition_header.jpg");
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px;
+  color: white;
+  text-shadow: -1px -1px 0 #820d5c, 1px -1px 0 #820d5c, -1px 1px 0 #820d5c,
+    1px 1px 0 #820d5c;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navLink {
+  text-decoration: none;
+  color: white;
+  padding: 5px 20px;
+}
+
+.searchbar {
+  padding-bottom: 20px;
+}
+
+input {
+  width: 30%;
+  border: 2px solid #820d5c;
+}
+
+.searchbtn {
+  border: 2px solid #820d5c;
+  background-color: #c9b2b8;
+  color: white;
+  text-shadow: -1px -1px 0 #820d5c, 1px -1px 0 #820d5c, -1px 1px 0 #820d5c,
+    1px 1px 0 #820d5c;
+}
